@@ -18,9 +18,9 @@ public class Main {
 		unsorted.add("b");
 		unsorted.add("j");*/
 
-		System.out.println(unsorted);
+		System.out.println("unsorted: "+ unsorted);
 		System.out.println("============");
-		System.out.println("unsorted: " + getSortedAnonymous(unsorted));
+		System.out.println("sorted: " + getSortedAnonymous(unsorted));
 		System.out.println("============");
 		System.out.println("sorted: "+ getSortedMyImplementation(unsorted));
 		System.out.println("============");
