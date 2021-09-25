@@ -1,6 +1,7 @@
 package com.sda.advanced.solution.zad3;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -52,6 +53,14 @@ public class Main {
 				System.out.println("Klucz: " + entry.getKey() + ", Wartość: " + entry.getValue() + ",");
 			}
 		}
+	}
+
+	private static void printWithStream(Map<String, Integer> map) {
+		final String collect = map.entrySet().stream()
+				.map(entry -> "Klucz: " + entry.getKey() + ", Wartość: " + entry.getValue())
+				.collect(Collectors.joining("," + System.lineSeparator(), "", "."));
+
+		System.out.println(collect);
 	}
 
 }
