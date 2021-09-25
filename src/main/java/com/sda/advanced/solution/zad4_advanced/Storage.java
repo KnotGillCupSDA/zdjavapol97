@@ -47,7 +47,7 @@ public class Storage {
 
 		return map.entrySet()
 				.stream()
-				.filter(entry -> entry.getValue().equals(value))
+				.filter(entry -> entry.getValue().contains(value))
 				.map(entry -> entry.getKey())
 				.collect(Collectors.toList());
 	}
