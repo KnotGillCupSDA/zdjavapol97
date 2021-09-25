@@ -1,5 +1,6 @@
 package com.sda.advanced.solution.zad1;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
 	}
 
 	private static List<String> getSorted(List<String> unsorted) {
-		return null;
+		return Collections.emptyList();
 	}
 
 }
