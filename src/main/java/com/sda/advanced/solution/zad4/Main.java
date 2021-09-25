@@ -5,7 +5,7 @@ public class Main {
 		Storage storage = new Storage();
 
 		storage.addToStorage("Horstmann", "Java podstawy");
-		storage.addToStorage("Horstmann", "Java zaawansowana");
+		//storage.addToStorage("Horstmann", "Java zaawansowana");
 		storage.addToStorage("Nieznany", "Java rusz głową");
 		storage.addToStorage("Bloch", "Essential Java");
 
