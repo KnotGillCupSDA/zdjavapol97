@@ -1,4 +1,4 @@
-package com.sda.advanced.solution.zad4;
+package com.sda.advanced.solution.zad4_advanced;
 
 public class Main {
 	public static void main(String[] args) {
