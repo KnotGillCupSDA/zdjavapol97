@@ -1,4 +1,4 @@
-package com.sda.advanced.my.zad1;
+package com.sda.advanced.solution.zad1;
 
 import java.util.List;
 
