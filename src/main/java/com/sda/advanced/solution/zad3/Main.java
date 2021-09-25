@@ -1,6 +1,5 @@
 package com.sda.advanced.solution.zad3;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
@@ -22,11 +21,37 @@ public class Main {
 				"PHP", 0);
 
 		print(map);
-
+		System.out.println("========");
+		printWithEntrySet(map);
 	}
 
 	private static void print(Map<String, Integer> map) {
+		int i = 0;
+		for (String key : map.keySet()) {
+			Integer value = map.get(key);
+			i++; //i = i + 1
 
+			boolean isLastLoop = i == map.size();
+			if (isLastLoop) {
+				System.out.println("Klucz: " + key + ", Wartość: " + value + ".");
+			} else {
+				System.out.println("Klucz: " + key + ", Wartość: " + value + ",");
+			}
+		}
+	}
+
+	private static void printWithEntrySet(Map<String, Integer> map) {
+		int i = 0;
+		for (Map.Entry<String, Integer> entry : map.entrySet()) {
+			i++; //i = i + 1
+
+			boolean isLastLoop = i == map.size();
+			if(isLastLoop) {
+				System.out.println("Klucz: " + entry.getKey() + ", Wartość: " + entry.getValue() + ".");
+			} else {
+				System.out.println("Klucz: " + entry.getKey() + ", Wartość: " + entry.getValue() + ",");
+			}
+		}
 	}
 
 }
