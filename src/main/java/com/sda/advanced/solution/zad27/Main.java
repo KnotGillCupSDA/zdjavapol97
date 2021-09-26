@@ -10,8 +10,10 @@ public class Main {
 		intJoiner.join(1, 2, 3);
 		System.out.println(join);
 
-		/*final Joiner2 joiner2 = new Joiner2();
-		final String joinStrings = joiner2.join("+", "a", "b", "c");
-		final String joinInts = joiner2.join("+", 1, 2, 3);*/
+		final JoinerWithGenericMethod joiner2 = new JoinerWithGenericMethod("-");
+		final String joinStrings = joiner2.join("a", "b", "c");
+		System.out.println(joinStrings);
+		final String joinInts = joiner2.join(1, 2, 3);
+		System.out.println(joinInts);
 	}
 }
