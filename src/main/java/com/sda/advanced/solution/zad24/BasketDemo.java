@@ -11,6 +11,6 @@ public class BasketDemo {
 		basket.removeFromBasket();
 		basket.removeFromBasket();
 
-		System.out.println("Still working");
+		System.out.println("Still working?");
 	}
 }
