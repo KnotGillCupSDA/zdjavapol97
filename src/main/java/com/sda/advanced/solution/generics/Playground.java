@@ -3,7 +3,7 @@ package com.sda.advanced.solution.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayGround {
+public class Playground {
 
 	public static void main(String[] args) {
 
