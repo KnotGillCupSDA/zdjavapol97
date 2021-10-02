@@ -1,6 +1,8 @@
 package com.sda.advanced.solution.threads.synchronization;
 
-public class SynchronizedMethod {
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class Atomic {
 
 	public static void main(String[] args) throws InterruptedException {
 		final Pair pair = new Pair(0, 0);
@@ -17,33 +19,28 @@ public class SynchronizedMethod {
 
 	static class Pair {
 
-		private Integer left;
-		private Integer right;
+		private final AtomicInteger left;
+		private final AtomicInteger right;
 
 		public Pair(final Integer left, final Integer right) {
-			this.left = left;
-			this.right = right;
+			this.left = new AtomicInteger(left);
+			this.right = new AtomicInteger(right);
 		}
 
 		public void incrementLeft() {
-			System.out.println("incrementing left");
-			//synchronized block
-			synchronized (this) {
-				left++;
-			}
+			left.incrementAndGet();
 		}
 
-		//synchronized
-		public synchronized void incrementRight() {
-			right++;
+		public void incrementRight() {
+			right.incrementAndGet();
 		}
 
 		public Integer getLeft() {
-			return left;
+			return left.get();
 		}
 
 		public Integer getRight() {
-			return right;
+			return right.get();
 		}
 	}
 
@@ -64,4 +61,5 @@ public class SynchronizedMethod {
 			System.out.println(pair.getLeft() + " " + pair.getRight());
 		}
 	}
+
 }
