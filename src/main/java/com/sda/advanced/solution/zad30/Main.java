@@ -18,30 +18,20 @@ public class Main {
 	}
 
 	private static void reverseContent(String inputFile, String outputFile) throws IOException {
-		BufferedReader in = null;
-		BufferedWriter out = null;
 
-		try {
-			in = new BufferedReader(new FileReader(inputFile));
-			out = new BufferedWriter(new FileWriter(outputFile));
+		try (BufferedReader in = new BufferedReader(new FileReader(inputFile));
+				BufferedWriter out = new BufferedWriter(new FileWriter(outputFile))) {
 
 			String line;
 			while ((line = in.readLine()) != null) {
 				out.write(reverse(line));
 				out.newLine();
 			}
-		} finally {
-			if (in != null) {
-				in.close();
-			}
-			if (out != null) {
-				out.close();
-			}
 		}
 	}
 
 	private static String reverse(String filename) {
-		return null;
+		return new StringBuilder(filename).reverse().toString();
 	}
 
 }
